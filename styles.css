@@ -76,6 +76,10 @@
   }
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -215,6 +219,12 @@ header nav>ul>li>ul>li>a {
     text-align: left;
   }
 
+  .body-top img{
+    width: 807px;
+    margin-right: -220px;
+}
+  
+
   /* Start LEFT side of top part of body */
   .body-top-left h1{
     font-size: 14px;
@@ -258,7 +268,7 @@ header nav>ul>li>ul>li>a {
 
 /* Start Second part of body */
 
-.body-second {
+#body-second {
   background-color:  #ffffff;
 }
 
@@ -274,10 +284,12 @@ header nav>ul>li>ul>li>a {
   text-align: left;
   }
 
-  .body-second img{
-    padding-right: 76px;
-  }
+
 /* Start right side of top part of body */
+
+  .body-second-right{
+    padding-left: 88px;
+  }
 
   .body-second-right h1{
     padding-bottom: 30px;
@@ -316,8 +328,9 @@ header nav>ul>li>ul>li>a {
 
   /* End  Second part of body */
 
-  .body-third {
+  #body-third {
     background-color:  #ffffff;
+    box-shadow: 14px 20px 24px 7px black;
   }
   
   .body-third-container{
@@ -345,10 +358,11 @@ header nav>ul>li>ul>li>a {
    
   
     .first-part-third h1{
-      padding-bottom: 10px;
-      font-size: 40px;
+      padding-bottom: 16px;
+      font-size: 37px;
       font-weight: bold;
-    }
+  }
+    
     .first-part-third h2{
       font-size: 15px;
       padding-bottom: 3px;
@@ -517,7 +531,7 @@ header nav>ul>li>ul>li>a {
           padding-bottom: 20px;
         }
 
-        .first-box-third i:hover,.first-box-third h1:hover,.second-box-third i:hover,.second-box-third h1:hover,.third-box-third i:hover,.third-box-third h1:hover,.fifth-box-third i:hover,.fifth-box-third h1:hover,.sixth-box-third i:hover,.sixth-box-third h1:hover {
+        .first-box-third i:hover,.first-box-third h1:hover,.second-box-third i:hover,.second-box-third h1:hover,.third-box-third i:hover,.third-box-third h1:hover,.fifth-box-third i:hover,.fifth-box-third h1:hover,.sixth-box-third i:hover,.sixth-box-third h1:hover,.forth-box-third i:hover,.forth-box-third h1:hover {
           transition:.3s;
           color:#62bdfc
         }
@@ -643,7 +657,7 @@ header nav>ul>li>ul>li>a {
           /* End Forth part of body */
           
           /* Start fifth part of body */
-          .body-fifth{
+          #body-fifth{
             background-color: #ffffff;
           }
 
@@ -688,23 +702,42 @@ header nav>ul>li>ul>li>a {
             .first-part-fifth li a {
               color: black;
             }
+            /* START HOVER OF li */
+            .first-part-fifth li:after {
+              display:block;
+              content: '';
+              border-bottom: solid 2px #252525;  
+              transform: scaleX(0);  
+              transition: transform 250ms ease-in-out;
+            }
+            .first-part-fifth li:hover:after { transform: scaleX(.4); }
+
+            .first-part-fifth li::after {transform-origin:  0% 50%; }
+
+            .first-part-fifth li:first-child::after{
+              transform: none;
+              border-bottom: none;
+            }
+            /* End HOVER OF li */
 
             .first-part-fifth a.active {
-
-              color: blue;
+              
+              color: blue;  
             }
 
-            .body-fifth img{
+
+
+            #body-fifth img{
               width: 270px;
               padding-bottom: 10px;
             }
 
-            .body-fifth h1{
+            #body-fifth h1{
               font-weight: bold;
               font-size: 15px;
             }
 
-            .body-fifth h2{
+            #body-fifth h2{
               font-size: 13px;
               color: #a29c9c;
             }
@@ -971,8 +1004,9 @@ header nav>ul>li>ul>li>a {
               /* END SIXTH-LINE OF BODY */
 
               /* START SEVENTH-LINE OF BODY */
-              .body-seventh{
-                background-color: #f1f1f1;
+              #body-seventh{
+                background-color: #fbfbfc;
+                box-shadow: 14px 20px 24px 7px black;
               }
               
               .body-seventh-container{
@@ -999,7 +1033,7 @@ header nav>ul>li>ul>li>a {
                 }
 
                 .first-line-seventh h2{
-                  color:#d9d8d8;
+                  color:#acacac;
                   font-size: 15px;
                 }
 
@@ -1016,14 +1050,15 @@ header nav>ul>li>ul>li>a {
                 .first-box-seventh{
                   width: 272px;
                   height: 520px;
-                  background-color: #d6d9f2;
+                  background-color: #e8eaf9;
                   position: absolute;
                   top: 0px;
                   left: 0px;
+                  transition:.5s all;
                 }
 
                 .first-box-seventh:hover{
-                  transition:.5s all;
+                  
                   transform: scale(1.09 ,1.09);
                   background:linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
                   z-index: 10;
@@ -1051,10 +1086,10 @@ header nav>ul>li>ul>li>a {
                     top: 304px;
                     left: 13px;
                     font-size: 15px;
-                    border-top: 1px solid #eeeff7;
+                    border-top: 1px solid #d5d5d5;
                     padding: 10px 4px 9px 0px;
                     width: 250px;
-                    border-bottom: 1px solid #eeeff7;
+                    border-bottom: 1px solid #d5d5d5;
                 }
                   
                   
@@ -1065,7 +1100,7 @@ header nav>ul>li>ul>li>a {
                     font-size: 15px;
                     padding: 10px 4px 9px 0px;
                     width: 250px;
-                    border-bottom: 1px solid #eeeff7;
+                    border-bottom: 1px solid #d5d5d5;
                   } 
                   
                   .first-box-seventh h5{
@@ -1075,14 +1110,14 @@ header nav>ul>li>ul>li>a {
                     font-size: 15px;
                     padding: 10px 4px 9px 0px;
                     width: 250px;
-                    border-bottom: 1px solid #eeeff7;
+                    border-bottom: 1px solid #d5d5d5;
                   } 
 
                   .first-box-seventh h6{
                     position: absolute;
                     top: 450px;
                     left: 59px;
-                    font-size: 40px;
+                    font-size: 28px;
                 }
                   
               .circle-first-box{
@@ -1114,14 +1149,15 @@ header nav>ul>li>ul>li>a {
               .second-box-seventh{
                 width: 272px;
                 height: 520px;
-                background-color: #d6d9f2;
+                background-color: #e8eaf9;
                 position: absolute;
                 top: 0px;
                 left: 272px;
+                transition:.5s all;
               }
 
               .second-box-seventh:hover{
-                transition:.5s all;
+                
                 transform: scale(1.09 ,1.09);
                 background:linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
                 z-index: 10;
@@ -1149,10 +1185,10 @@ header nav>ul>li>ul>li>a {
                   top: 304px;
                   left: 13px;
                   font-size: 15px;
-                  border-top: 1px solid #eeeff7;
+                  border-top: 1px solid #d5d5d5;
                   padding: 10px 4px 9px 0px;
                   width: 250px;
-                  border-bottom: 1px solid #eeeff7;
+                  border-bottom: 1px solid #d5d5d5;
               }
                 
                 
@@ -1163,7 +1199,7 @@ header nav>ul>li>ul>li>a {
                   font-size: 15px;
                   padding: 10px 4px 9px 0px;
                   width: 250px;
-                  border-bottom: 1px solid #eeeff7;
+                  border-bottom: 1px solid #d5d5d5;
                 } 
                 
                 .second-box-seventh h5{
@@ -1173,14 +1209,14 @@ header nav>ul>li>ul>li>a {
                   font-size: 15px;
                   padding: 10px 4px 9px 0px;
                   width: 250px;
-                  border-bottom: 1px solid #eeeff7;
+                  border-bottom: 1px solid #d5d5d5;
                 } 
 
                 .second-box-seventh h6{
                   position: absolute;
                   top: 450px;
                   left: 59px;
-                  font-size: 40px;
+                  font-size: 28px;
               }
                 
               .circle-second-box{
@@ -1206,14 +1242,15 @@ header nav>ul>li>ul>li>a {
             .third-box-seventh{
               width: 272px;
               height: 520px;
-              background-color: #d6d9f2;
+              background-color: #e8eaf9;
               position: absolute;
               top: 0px;
               left: 544px;
+              transition:.5s all;
             }
 
             .third-box-seventh:hover{
-              transition:.5s all;
+             
               transform: scale(1.09 ,1.09);
               background:linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
               z-index: 10;
@@ -1239,10 +1276,10 @@ header nav>ul>li>ul>li>a {
                 top: 304px;
                 left: 13px;
                 font-size: 15px;
-                border-top: 1px solid #eeeff7;
+                border-top: 1px solid #d5d5d5;
                 padding: 10px 4px 9px 0px;
                 width: 250px;
-                border-bottom: 1px solid #eeeff7;
+                border-bottom: 1px solid #d5d5d5;
             }
               
               
@@ -1253,7 +1290,7 @@ header nav>ul>li>ul>li>a {
                 font-size: 15px;
                 padding: 10px 4px 9px 0px;
                 width: 250px;
-                border-bottom: 1px solid #eeeff7;
+                border-bottom: 1px solid #d5d5d5;
               } 
               
               .third-box-seventh h5{
@@ -1263,14 +1300,14 @@ header nav>ul>li>ul>li>a {
                 font-size: 15px;
                 padding: 10px 4px 9px 0px;
                 width: 250px;
-                border-bottom: 1px solid #eeeff7;
+                border-bottom: 1px solid #d5d5d5;
               } 
 
               .third-box-seventh h6{
                 position: absolute;
                 top: 450px;
                 left: 59px;
-                font-size: 40px;
+                font-size: 28px;
             }
               
             .circle-third-box{
@@ -1297,14 +1334,15 @@ header nav>ul>li>ul>li>a {
           .Forth-box-seventh{
             width: 272px;
             height: 520px;
-            background-color: #d6d9f2;
+            background-color: #e8eaf9;
             position: absolute;
             top: 0px;
             left: 816px ;
+            transition:.5s all; 
           }
 
           .forth-box-seventh:hover{
-            transition:.5s all;
+            
             transform: scale(1.09 ,1.09);
             background:linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
             z-index: 10;
@@ -1330,10 +1368,10 @@ header nav>ul>li>ul>li>a {
               top: 304px;
               left: 13px;
               font-size: 15px;
-              border-top: 1px solid #eeeff7;
+              border-top: 1px solid #d5d5d5;
               padding: 10px 4px 9px 0px;
               width: 250px;
-              border-bottom: 1px solid #eeeff7;
+              border-bottom: 1px solid #d5d5d5;
           }
             
             
@@ -1344,7 +1382,7 @@ header nav>ul>li>ul>li>a {
               font-size: 15px;
               padding: 10px 4px 9px 0px;
               width: 250px;
-              border-bottom: 1px solid #eeeff7;
+              border-bottom: 1px solid #d5d5d5;
             } 
             
             .Forth-box-seventh h5{
@@ -1354,14 +1392,14 @@ header nav>ul>li>ul>li>a {
               font-size: 15px;
               padding: 10px 4px 9px 0px;
               width: 250px;
-              border-bottom: 1px solid #eeeff7;
+              border-bottom: 1px solid #d5d5d5  ;
             } 
 
             .Forth-box-seventh h6{
               position: absolute;
               top: 450px;
               left: 59px;
-              font-size: 40px;
+              font-size: 28px;
           }
             
           .circle-Forth-box{
@@ -1431,10 +1469,11 @@ header nav>ul>li>ul>li>a {
 
         .second-line-eighth img{
           padding-left: 10px;
+          transition: .5s;
         }
 
         .second-line-eighth img:hover{
-          transition: .5s;
+          
           transform: scale(1.03,1.03);
           cursor: pointer;
         }
@@ -1482,7 +1521,7 @@ header nav>ul>li>ul>li>a {
 
         .third-line-eighth1 i{
           padding-left: 7px;
-        }
+        } 
 
         .third-line-eighth1 span:nth-child(3){
           padding-left: 80px;
@@ -1491,7 +1530,7 @@ header nav>ul>li>ul>li>a {
           position: absolute;
           top: -8px;
           left: -38px;
-        }
+        } 
 
         .third-line-eighth1 span:nth-child(3,4){
           padding-left: 4px;
@@ -1766,4 +1805,4 @@ header nav>ul>li>ul>li>a {
             .third-part-tenth i:hover {
               color:#9999fc;
             }
-            
+              
