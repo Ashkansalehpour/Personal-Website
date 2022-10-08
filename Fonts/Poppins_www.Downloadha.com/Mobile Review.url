@@ -1,0 +1,11 @@
+[DEFAULT]
+BASEURL=http://www.p30download.com/
+[InternetShortcut]
+URL=http://mobile.downloadha.com/
+Modified=F0B467C69560CB0192
+IconFile=C:\WINDOWS\system32\SHELL32.dll
+IconIndex=220
+HotKey=0
+IDList=
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
